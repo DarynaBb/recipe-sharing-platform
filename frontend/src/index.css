@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.font-poppins-semi-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.font-poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.font-pt {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-italianno {
+  font-family: 'Italianno', cursive;
+}
+
+
+@layer utilities {
+  .max-container {
+    @apply mx-auto max-w-[1240px];
+  }
+
+  .padding-container {
+    @apply px-[75px] py-[20px];
+  }
+
+  .max-container-nav {
+    @apply mx-auto max-w-[1095px];
+  }
+
+  .padding-container-nav {
+    @apply px-[120px] py-[20px];
+  }
+}
+
+.recipe-transition {
+  transition: all ease-in-out 0.5s;
+}
