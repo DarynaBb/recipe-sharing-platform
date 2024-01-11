@@ -22,7 +22,7 @@ const UserContextProvider = ({ children }) => {
 	const [selectedRecipe, setSelectedRecipe] = useState(null);
 
 	// const url = "https://recipe-platform-backend.onrender.com";
-	const url = "http://localhost:5001"
+	const url = "http://localhost:3001"
 
 	const fetchUserData = async () => {
 		try {

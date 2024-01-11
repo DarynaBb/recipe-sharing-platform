@@ -7,7 +7,7 @@ import rezeptRouter from "./router/rezeptRouter.js"
 import commentRouter from "./router/commentRouter.js"
 
 // const PORT = process.env.PORT
-const PORT = 5001
+const PORT = process.env.PORT || 5001;
 
 const app = express()
 
