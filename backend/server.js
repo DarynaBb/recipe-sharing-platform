@@ -6,7 +6,8 @@ import { connectMongoose } from "./util/connectMongoose.js"
 import rezeptRouter from "./router/rezeptRouter.js"
 import commentRouter from "./router/commentRouter.js"
 
-const PORT = process.env.PORT
+// const PORT = process.env.PORT
+const PORT = 5001
 
 const app = express()
 
