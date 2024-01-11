@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import avatar from "../assets/Avatar.svg";
+import { UserContext } from "../context/UserContext";
 function UpperNav() {
 	const [userFirstName, setUserFirstName] = useState("");
 	const [userLastName, setUserLastName] = useState("");
+	const {url} = useContext(UserContext);
 	useEffect(() => {
 		const fetchUserName = async () => {
-			const response = await fetch(
-				"https://rezept-share-plattform.onrender.com"
-			);
+			const response = await fetch(url);
 			const data = await response.json();
 			console.log(data[0]);
 			setUserFirstName(data[0].firstName);
