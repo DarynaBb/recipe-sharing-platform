@@ -2,11 +2,12 @@ import UserSchema from "../models/rezeptSchema.js";
 
 export const getAllRecipes = async (req, res) => {
   try {
-    const recipes = await UserSchema.find();
+    const recipes = await UserSchema.find().maxTimeMS(20000);
     res.status(200).json(recipes);
   } catch (error) {
-    res.status(500).send("Fehler beim Abrufen der Recipe: " + error.message);
-  }
+    console.error("Error fetching recipes:", error);
+  res.status(500).send("Fehler beim Abrufen der Rezepte: " + error.message);
+}
 };
 
 export const createUser = async (req, res) => {
