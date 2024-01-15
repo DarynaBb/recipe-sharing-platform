@@ -6,7 +6,9 @@ import { UserContext } from "../context/UserContext";
 function UpperNav() {
 	const [userFirstName, setUserFirstName] = useState("");
 	const [userLastName, setUserLastName] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
 	const {url} = useContext(UserContext);
+
 	useEffect(() => {
 		const fetchUserName = async () => {
 			const response = await fetch(url);
@@ -14,6 +16,7 @@ function UpperNav() {
 			console.log(data[0]);
 			setUserFirstName(data[0].firstName);
 			setUserLastName(data[0].lastName);
+			setIsLoading(true);
 		};
 		fetchUserName();
 	}, []);
@@ -31,10 +34,12 @@ function UpperNav() {
 					<div className="flex items-center gap-[12px] uppercase text-[14px] font-poppins-regular text-text-gray">
 						<img src={avatar} alt="avatar" className="w-[24px] h-[24px]" />
 						<div className="border-l-[1px]">
-							<Link className=" pl-[12px]" to="/user">
-								{userFirstName} {userLastName}
-							</Link>
-						</div>
+						<Link className="pl-[12px]" to="/user">
+							{`${isLoading ? userFirstName + " " + userLastName : "is Loading..."}`}
+						</Link>
+					</div>
+					
+						
 					</div>
 				</div>
 			</div>

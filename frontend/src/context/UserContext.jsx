@@ -29,10 +29,11 @@ const UserContextProvider = ({ children }) => {
 			const response = await axios.get(url);
 			setUsers(response.data);
 			console.log(response.data);
+			setIsLoading(true);
 		} catch (error) {
 			console.error("Fehler beim Abrufen der Daten:", error.message);
 		}
-		setIsLoading(true);
+		
 	};
 
 	const updateRecipe = (userId, recipeItemId) => {
