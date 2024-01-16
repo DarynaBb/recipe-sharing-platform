@@ -35,7 +35,7 @@ function Main() {
 						<ul className="flex flex-wrap items-start gap-[15px] md:gap-[30px] justify-center">
 							{recipes && recipes.length > 0 ? (
 								recipes.map((recipe) => (
-									<li key={recipe.idMeal} className="basis-[48%] md:basis-1/3 min-w-[250px] md:max-w-[250px] recipe-transition hover:scale-[1.1] relative">
+									<li key={recipe.idMeal} className="basis-[48%] md:basis-1/3 min-w-[250px] md:max-w-[250px] recipe-transition md:hover:scale-[1.1] relative">
 										{/* <button onClick={() => onClickHandler(recipe.idMeal)} className="absolute top-[10px] right-[10px] z-10 ">
 											<img src={heartClickedIds.includes(recipe.idMeal) ? whiteHeart : heart} alt="heart" />
 										</button> */}
