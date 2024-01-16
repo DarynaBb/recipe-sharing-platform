@@ -85,7 +85,7 @@ function SinglePage({ mealIdProp }) {
                                     <div className="relative md:basis-[50%] grow-0 flex md:justify-start justify-center">
                                         <img className="w-[75%] md:max-w-[500px] md:w-full object-cover aspect-[3/4]" src={item.strMealThumb} alt={item.strMeal} />
                                         <button
-                                                className="absolute text-black font-semibold right-3 top-3 cursor-pointer"
+                                                className="absolute right-[15%] md:right-[10px] top-[10px] z-10 cursor-pointer"
                                                 onClick={onClickHandler}
                                             >
                                                 <img
